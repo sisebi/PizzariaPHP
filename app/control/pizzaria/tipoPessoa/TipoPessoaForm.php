@@ -1,16 +1,26 @@
 <?php
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+use Adianti\Control\TPage;
+use Adianti\Wrapper\BootstrapFormBuilder;
+use Adianti\Widget\Form\TEntry;
+use Adianti\Control\TAction;
+use Adianti\Widget\Container\TVBox;
+use Adianti\Widget\Util\TXMLBreadCrumb;
+use Adianti\Widget\Dialog\TMessage;
+use Adianti\Database\TTransaction;
+use Adianti\Widget\Form\TLabel;
 /**
- * Description of TipoPessoa
- *
- * @author PC
+ * @Eliezer
  */
-class TipoPessoa {
-    //put your code here
+class TipoPessoa extends TPage{
+    protected $form;
+    protected $base = 'db_sistema';
+    
+    function __construct(){
+        parent::__construct();
+        parent::setDatabase('db_sistema');
+        parent::setActiveRecord('TipoPessoaModel');
+        
+               
+    }
+    
 }
