@@ -72,13 +72,14 @@ class ProdutoBuscarPersonalizado extends TPage{
             TTransaction::open($this->base);
             $produto = new ProdutoModel($key);
             $produto->delete();
-            new TMessage('info', 'Deletado com sucesso !');
-            TTransaction::close();
-            $this->buscar($param);
+            new TMessage('info', 'Deletado com sucesso !');            
         } catch (Exception $ex) {
             TTransaction::rollback();
             new TMessage('error', 'Erro :'.$ex->getMessage());
-        } 
+        } finally{
+            TTransaction::close();
+            $this->buscar($param);   
+        }    
     }
     
     public function buscar($param) {
