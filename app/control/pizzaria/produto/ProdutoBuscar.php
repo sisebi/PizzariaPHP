@@ -25,7 +25,7 @@ class ProdutoBuscar extends TStandardList{
         $this->form->setFormTitle('Buscar Produto');
         
         $descricao = new TEntry('descricao');
-            $descricao->setValue(TSession::getValue('ProdutoModel_descricao'));
+//            $descricao->setValue(TSession::getValue('ProdutoModel_descricao'));
             $descricao->setSize('100%');
         
         $this->form->addFields([new TLabel('Descrição')],[$descricao]);

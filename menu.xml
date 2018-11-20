@@ -107,8 +107,12 @@
             <action>CommonPage</action>
         </menuitem>
         <menuitem label="Common page 3">
-            <icon/>
+            <icon>fa:th fa-fw</icon>
             <action>CommonPage</action>
+        </menuitem>
+        <menuitem label="Tipo Pessoa Padrão">
+            <icon>fa:th fa-fw</icon>
+            <action>TipoPessoaBuscar</action>
         </menuitem>
     </menu>
 </menuitem>
